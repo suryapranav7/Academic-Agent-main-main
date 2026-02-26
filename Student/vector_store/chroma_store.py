@@ -6,6 +6,15 @@ import json
 
 class ChromaVectorStore:
     def __init__(self, persistence_path: str = "data/vector_db"):
+        # Detect Vercel/Render environment
+        is_cloud = os.environ.get("VERCEL") == "1" or os.environ.get("RENDER") == "1"
+        
+        if is_cloud:
+            # Use /tmp for ephemeral persistence
+            # /tmp is the only writable directory on Vercel/Render Functions
+            persistence_path = "/tmp/vector_db"
+            print(f"Cloud detected. Using ephemeral path: {persistence_path}")
+
         self.client = chromadb.PersistentClient(
             path=persistence_path,
             settings=Settings(allow_reset=True)

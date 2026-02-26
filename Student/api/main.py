@@ -1,14 +1,29 @@
-import sys
-import asyncio
+import os
+# Fix for CrewAI "Read-only file system" on Vercel/Render
+if os.environ.get("VERCEL") == "1" or os.environ.get("RENDER") == "1":
+    os.environ['HOME'] = '/tmp'
+    os.environ['XDG_DATA_HOME'] = '/tmp'
 
-# Fix for Windows Event Loop Runtime Error (MUST BE BEFORE IMPORTS)
-if sys.platform == 'win32':
-    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+# Fix for ChromaDB + SQLite on Linux
+try:
+    import pysqlite3
+    import sys
+    sys.modules["sqlite3"] = sys.modules.pop("pysqlite3")
+    print("✅ pysqlite3 successfully monkey-patched.")
+except (ImportError, KeyError) as e:
+    print(f"⚠️ pysqlite3 patch skipped: {e}")
 
 from fastapi import FastAPI, HTTPException, Depends
 from fastapi.middleware.cors import CORSMiddleware
 from contextlib import asynccontextmanager
 from typing import Dict, List, Any
+import os
+import sys
+import asyncio
+import traceback
+
+if sys.platform == 'win32':
+    asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 from core.orchestrator import Orchestrator
 from api.schemas import (
