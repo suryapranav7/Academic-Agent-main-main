@@ -1,0 +1,73 @@
+{
+  "program": "B.Tech",
+  "year": "2",
+  "semester": "3",
+  "subjects": [
+    {
+      "subject": "Data Structures",
+      "subject_code": "DS203",
+      "units": [
+        {
+          "unit_id": "DS-U1",
+          "unit_title": "Introduction to Data Structures",
+          "topics": [
+            { "topic_id": "DS-U1-T1", "topic_name": "Abstract Data Types (ADT)" },
+            { "topic_id": "DS-U1-T2", "topic_name": "Time and Space Complexity" },
+            { "topic_id": "DS-U1-T3", "topic_name": "Asymptotic Notations (Big-O, Big-Ω, Big-Θ)" }
+          ]
+        },
+        {
+          "unit_id": "DS-U2",
+          "unit_title": "Linear Data Structures",
+          "topics": [
+            { "topic_id": "DS-U2-T1", "topic_name": "Arrays and Applications" },
+            { "topic_id": "DS-U2-T2", "topic_name": "Singly Linked Lists" },
+            { "topic_id": "DS-U2-T3", "topic_name": "Doubly Linked Lists" }
+          ]
+        },
+        {
+          "unit_id": "DS-U3",
+          "unit_title": "Stacks and Queues",
+          "topics": [
+            { "topic_id": "DS-U3-T1", "topic_name": "Stack Operations and Applications" },
+            { "topic_id": "DS-U3-T2", "topic_name": "Infix to Postfix Conversion" },
+            { "topic_id": "DS-U3-T3", "topic_name": "Queue Types and Operations" }
+          ]
+        }
+      ]
+    },
+    {
+      "subject": "Discrete Mathematics",
+      "subject_code": "DM201",
+      "units": [
+        {
+          "unit_id": "DM-U1",
+          "unit_title": "Mathematical Logic",
+          "topics": [
+            { "topic_id": "DM-U1-T1", "topic_name": "Propositions and Logical Connectives" },
+            { "topic_id": "DM-U1-T2", "topic_name": "Truth Tables" },
+            { "topic_id": "DM-U1-T3", "topic_name": "Tautology and Contradiction" }
+          ]
+        },
+        {
+          "unit_id": "DM-U2",
+          "unit_title": "Set Theory",
+          "topics": [
+            { "topic_id": "DM-U2-T1", "topic_name": "Basic Set Operations" },
+            { "topic_id": "DM-U2-T2", "topic_name": "Venn Diagrams" },
+            { "topic_id": "DM-U2-T3", "topic_name": "Relations and Functions" }
+          ]
+        },
+        {
+          "unit_id": "DM-U3",
+          "unit_title": "Relations",
+          "topics": [
+            { "topic_id": "DM-U3-T1", "topic_name": "Types of Relations" },
+            { "topic_id": "DM-U3-T2", "topic_name": "Properties of Relations" },
+            { "topic_id": "DM-U3-T3", "topic_name": "Equivalence Relations" }
+          ]
+        }
+      ]
+    }
+  ]
+}

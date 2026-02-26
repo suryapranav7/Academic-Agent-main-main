@@ -1,0 +1,383 @@
+{
+    "id": "unit_1",
+    "title": "Introduction to Linear Data Structures",
+    "aliases": [
+        "Unit 1",
+        "Unit I",
+        "DS Unit 1",
+        "DS-U1"
+    ],
+    "source": "Fundamentals of Data Structures in C (Horowitz & Sahni)",
+    "type": "unit",
+    "children": [
+        {
+            "id": "1.1",
+            "title": "Introduction to Data Structures",
+            "type": "section",
+            "purpose": "Explain why data structures are needed before defining what they are.",
+            "min_teachable": true,
+            "children": [
+                {
+                    "id": "1.1.1",
+                    "title": "Data vs Information",
+                    "type": "concept",
+                    "metadata": {
+                        "difficulty": "basic",
+                        "content_type": "concept"
+                    },
+                    "payload": {
+                        "definitions": [
+                            "Data: Raw facts.",
+                            "Information: Processed data."
+                        ],
+                        "key_points": [
+                            "Role of organization in turning data into information."
+                        ]
+                    }
+                },
+                {
+                    "id": "1.1.2",
+                    "title": "Data Types",
+                    "type": "concept",
+                    "metadata": {
+                        "difficulty": "basic",
+                        "prerequisites": [
+                            "Programming Fundamentals"
+                        ]
+                    },
+                    "payload": {
+                        "classification": [
+                            "Primitive",
+                            "Non-primitive",
+                            "User-defined"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.1.3",
+                    "title": "Data Structures",
+                    "type": "definition",
+                    "metadata": {
+                        "exam_weight": "medium",
+                        "content_type": "definition+classification"
+                    },
+                    "payload": {
+                        "definition": "Logical or mathematical model of a particular organization of data.",
+                        "classification": [
+                            "Linear vs Non-linear",
+                            "Logical vs Physical"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.1.4",
+                    "title": "Operations on Data Structures",
+                    "type": "list",
+                    "payload": {
+                        "operations": [
+                            "Traversing",
+                            "Insertion",
+                            "Deletion",
+                            "Searching",
+                            "Sorting",
+                            "Merging"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1.2",
+            "title": "Abstract Data Types (ADT)",
+            "type": "section",
+            "purpose": "Separation of what from how.",
+            "min_teachable": true,
+            "children": [
+                {
+                    "id": "1.2.1",
+                    "title": "Definition of ADT",
+                    "type": "definition",
+                    "metadata": {
+                        "exam_weight": "high",
+                        "content_type": "definition"
+                    },
+                    "payload": {
+                        "definition": "A set of objects and a set of operations on those objects.",
+                        "key_points": [
+                            "Logical description only",
+                            "No implementation details"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.2.2",
+                    "title": "ADT vs Data Structure",
+                    "type": "comparison",
+                    "metadata": {
+                        "critical_concept": true
+                    },
+                    "payload": {
+                        "comparison": {
+                            "ADT": "Specification",
+                            "Data Structure": "Implementation"
+                        }
+                    }
+                },
+                {
+                    "id": "1.2.3",
+                    "title": "Examples of ADT",
+                    "type": "illustration",
+                    "payload": {
+                        "examples": [
+                            "Stack ADT",
+                            "Queue ADT",
+                            "List ADT"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1.3",
+            "title": "Stack",
+            "type": "section",
+            "children": [
+                {
+                    "id": "1.3.1",
+                    "title": "Stack ADT",
+                    "type": "specification",
+                    "metadata": {
+                        "exam_weight": "high",
+                        "prerequisites": [
+                            "ADT Concept"
+                        ]
+                    },
+                    "payload": {
+                        "definition": "Linear structure following LIFO (Last In First Out).",
+                        "operations": [
+                            "Push",
+                            "Pop",
+                            "Peek",
+                            "IsEmpty",
+                            "IsFull"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.3.2",
+                    "title": "Stack Implementation using Array",
+                    "type": "implementation",
+                    "metadata": {
+                        "difficulty": "basic",
+                        "content_type": "algorithm"
+                    },
+                    "payload": {
+                        "representation": [
+                            "Array",
+                            "Top pointer",
+                            "Static memory"
+                        ],
+                        "algorithms": [
+                            {
+                                "name": "Push",
+                                "steps": [
+                                    "Check overflow",
+                                    "Increment top",
+                                    "Insert element"
+                                ]
+                            },
+                            {
+                                "name": "Pop",
+                                "steps": [
+                                    "Check underflow",
+                                    "Access top",
+                                    "Decrement top"
+                                ]
+                            }
+                        ]
+                    }
+                },
+                {
+                    "id": "1.3.3",
+                    "title": "Stack Implementation using Linked List",
+                    "type": "implementation",
+                    "metadata": {
+                        "exam_weight": "medium"
+                    },
+                    "payload": {
+                        "representation": [
+                            "Node structure",
+                            "Top as pointer to first node"
+                        ],
+                        "features": [
+                            "Dynamic memory allocation",
+                            "No overflow"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.3.4",
+                    "title": "Stack Applications",
+                    "type": "application",
+                    "metadata": {
+                        "teacher_preference_sensitive": true
+                    },
+                    "payload": {
+                        "applications": [
+                            {
+                                "name": "Expression Evaluation",
+                                "details": [
+                                    "Infix",
+                                    "Prefix",
+                                    "Postfix"
+                                ]
+                            },
+                            {
+                                "name": "Recursion",
+                                "details": [
+                                    "Function call stack",
+                                    "Activation records"
+                                ]
+                            },
+                            {
+                                "name": "Parenthesis Checking",
+                                "details": [
+                                    "Balanced symbols problem"
+                                ]
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1.4",
+            "title": "Queue",
+            "type": "section",
+            "children": [
+                {
+                    "id": "1.4.1",
+                    "title": "Queue ADT",
+                    "type": "specification",
+                    "metadata": {
+                        "exam_weight": "high"
+                    },
+                    "payload": {
+                        "definition": "Linear structure following FIFO (First In First Out).",
+                        "operations": [
+                            "Enqueue",
+                            "Dequeue",
+                            "IsEmpty",
+                            "IsFull"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.4.2",
+                    "title": "Queue Implementation using Array",
+                    "type": "implementation",
+                    "payload": {
+                        "representation": [
+                            "Front and Rear pointers"
+                        ],
+                        "algorithms": [
+                            {
+                                "name": "Enqueue",
+                                "steps": [
+                                    "Check overflow",
+                                    "Move rear"
+                                ]
+                            },
+                            {
+                                "name": "Dequeue",
+                                "steps": [
+                                    "Check underflow",
+                                    "Move front"
+                                ]
+                            }
+                        ],
+                        "limitations": [
+                            "Wasted space (motivation for Circular Queue)"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.4.3",
+                    "title": "Queue Implementation using Linked List",
+                    "type": "implementation",
+                    "payload": {
+                        "representation": [
+                            "Front and Rear pointers"
+                        ],
+                        "features": [
+                            "Dynamic allocation",
+                            "Efficient operations"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.4.4",
+                    "title": "Queue Variants",
+                    "type": "introductory",
+                    "metadata": {
+                        "depth": "shallow"
+                    },
+                    "payload": {
+                        "variants": [
+                            "Circular Queue",
+                            "Priority Queue"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "id": "1.5",
+            "title": "Linear Lists",
+            "type": "section",
+            "children": [
+                {
+                    "id": "1.5.1",
+                    "title": "Singly Linked List",
+                    "type": "structure",
+                    "metadata": {
+                        "exam_weight": "high"
+                    },
+                    "payload": {
+                        "definition": "Collection of nodes with Data and Next pointer.",
+                        "operations": [
+                            "Insertion (Beginning, End, Middle)",
+                            "Deletion",
+                            "Searching"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.5.2",
+                    "title": "Doubly Linked List",
+                    "type": "structure",
+                    "payload": {
+                        "definition": "Nodes with Previous and Next pointers.",
+                        "operations": [
+                            "Forward/Backward traversal",
+                            "Insertion",
+                            "Deletion"
+                        ]
+                    }
+                },
+                {
+                    "id": "1.5.3",
+                    "title": "Circular Linked List",
+                    "type": "structure",
+                    "payload": {
+                        "concept": "Last node points to first.",
+                        "applications": [
+                            "Round-robin scheduling",
+                            "Circular buffers"
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

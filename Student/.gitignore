@@ -1,0 +1,22 @@
+
+# Legacy / Deprecated Files (Supabase Migration)
+db/schema.py
+db/student_agent.db
+mcp/
+run_system.py
+tests/
+venv/
+PRESENTATION.md
+CODE_AUDIT_REPORT.md
+database.md
+validation_report.md
+.env
+.env.template
+data/
+reproduce_error_2.py
+scripts/check_modules.py
+scripts/test_api_modules.py
+demo_defense_presentation.md
+educational_materials.md
+education_poc_scope.md
+final_presentation.md
